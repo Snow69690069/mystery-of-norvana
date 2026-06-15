@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://bmv0p7u5hiwck"]
+
+[ext_resource type="Script" uid="uid://dge0uwwdn2r0n" path="res://pause_menu.gd" id="1_2nc7s"]
+[ext_resource type="Texture2D" uid="uid://d1qnuryrkcrcf" path="res://Tiny Swords (Update 010)/UI/Buttons/Button_Blue_3Slides.png" id="1_p81d2"]
+[ext_resource type="Texture2D" uid="uid://bgjroy0cvj2aw" path="res://Tiny Swords (Update 010)/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="2_2nc7s"]
+[ext_resource type="Texture2D" uid="uid://clomlfg0c6oun" path="res://Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="3_d3xb4"]
+[ext_resource type="FontFile" uid="uid://dg1823mvi7c04" path="res://PirataOne-Regular.ttf" id="4_mxa3g"]
+
+[node name="PauseMenu" type="Control" unique_id=942588989 groups=["pause_menu_group"]]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2nc7s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=277478379]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7019608)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=1943717189]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -234.00003
+offset_right = 237.0
+offset_bottom = 476.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Resume" type="TextureButton" parent="VB" unique_id=1119957670]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_p81d2")
+texture_pressed = ExtResource("2_2nc7s")
+texture_hover = ExtResource("3_d3xb4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Resume" unique_id=832333920]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_mxa3g")
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings" type="TextureButton" parent="VB" unique_id=836762420]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_p81d2")
+texture_pressed = ExtResource("2_2nc7s")
+texture_hover = ExtResource("3_d3xb4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Settings" unique_id=1858491965]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_mxa3g")
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="TextureButton" parent="VB" unique_id=1756174829]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_p81d2")
+texture_pressed = ExtResource("2_2nc7s")
+texture_hover = ExtResource("3_d3xb4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/MainMenu" unique_id=1722831366]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_mxa3g")
+theme_override_font_sizes/font_size = 60
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="VB" unique_id=1242856397]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Exit" type="TextureButton" parent="VB" unique_id=1427916239]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_p81d2")
+texture_pressed = ExtResource("2_2nc7s")
+texture_hover = ExtResource("3_d3xb4")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Exit" unique_id=1394170984]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("4_mxa3g")
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VB/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VB/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VB/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VB/Exit" to="." method="_on_exit_pressed"]

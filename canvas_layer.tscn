@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://u1wyg55i4oec"]
+
+[ext_resource type="Script" uid="uid://b6t0nllus8bc4" path="res://buttons.gd" id="1_mx0kw"]
+[ext_resource type="Texture2D" uid="uid://dai8yfqkf2yly" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/TinyRoundBlueButton.png" id="1_v2lfg"]
+[ext_resource type="Texture2D" uid="uid://dmjyup8mumblo" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/TinyRoundRedButton.png" id="2_tg4cr"]
+[ext_resource type="Texture2D" uid="uid://bf3cxwffm2e3m" path="res://recourses/Menu button-1b99.png" id="4_mx0kw"]
+[ext_resource type="Texture2D" uid="uid://ktfo766hmchd" path="res://Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_07.png" id="4_w4oxd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tg4cr"]
+radius = 30.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_37rai"]
+custom_solver_bias = 0.734
+radius = 29.65
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1162219542]
+script = ExtResource("1_mx0kw")
+
+[node name="Control" type="Control" parent="." unique_id=548725599 groups=["hud"]]
+layout_mode = 3
+anchor_left = 0.017
+anchor_top = -0.049000002
+anchor_right = 1.3590001
+anchor_bottom = 1.2390001
+offset_left = 254.416
+offset_top = 181.752
+offset_right = -85.568115
+offset_bottom = -18.87207
+
+[node name="right" type="TouchScreenButton" parent="Control" unique_id=340506905]
+position = Vector2(-52, 220)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_v2lfg")
+texture_pressed = ExtResource("1_v2lfg")
+shape = SubResource("CircleShape2D_tg4cr")
+action = "right"
+
+[node name="down" type="TouchScreenButton" parent="Control" unique_id=609213872]
+position = Vector2(-144, 319)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_v2lfg")
+texture_pressed = ExtResource("1_v2lfg")
+shape = SubResource("CircleShape2D_tg4cr")
+action = "down"
+
+[node name="left" type="TouchScreenButton" parent="Control" unique_id=1440240362]
+position = Vector2(-228, 212)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_v2lfg")
+texture_pressed = ExtResource("1_v2lfg")
+shape = SubResource("CircleShape2D_tg4cr")
+action = "left"
+
+[node name="up" type="TouchScreenButton" parent="Control" unique_id=1590020842]
+position = Vector2(-133, 102)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_v2lfg")
+texture_pressed = ExtResource("1_v2lfg")
+shape = SubResource("CircleShape2D_tg4cr")
+action = "up"
+
+[node name="attack" type="TouchScreenButton" parent="Control" unique_id=441289483]
+position = Vector2(1067, 214)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_tg4cr")
+texture_pressed = ExtResource("2_tg4cr")
+shape = SubResource("CircleShape2D_37rai")
+action = "attack"
+
+[node name="Menu" type="TouchScreenButton" parent="Control" unique_id=1510507292]
+position = Vector2(1139.944, -132.832)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_w4oxd")
+texture_pressed = ExtResource("4_mx0kw")
+action = "menu"
+
+[connection signal="pressed" from="Control/Menu" to="." method="_on_menu_pressed"]

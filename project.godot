@@ -1,0 +1,91 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="MYSTERY OF NORVANA"
+run/main_scene="uid://dtl406sti7giv"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="uid://bf5rpx1wb24ys"
+boot_splash/image="uid://c45oitujg6p0o"
+
+[autoload]
+
+PlayerData="*uid://b78wmd3ucltke"
+LevelData="*uid://dunweftaxoac4"
+InventoryManager="*uid://da4bfx530ty5a"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg", "res://addons/inventory_forge/plugin.cfg")
+
+[global_group]
+
+player=""
+enemies=""
+pause_menu_group=""
+
+[godot_ai]
+
+provider="Gemini"
+ollama_url="http://localhost:11434"
+model="gemini-3.1-flash-lite-preview"
+
+[input]
+
+right={
+"deadzone": 0.2,
+"events": []
+}
+attack={
+"deadzone": 0.2,
+"events": []
+}
+left={
+"deadzone": 0.2,
+"events": []
+}
+up={
+"deadzone": 0.2,
+"events": []
+}
+down={
+"deadzone": 0.2,
+"events": []
+}
+menu={
+"deadzone": 0.2,
+"events": []
+}
+inventory={
+"deadzone": 0.2,
+"events": []
+}
+
+[layer_names]
+
+2d_physics/layer_1="environment"
+2d_physics/layer_5="enemy_damage"
+2d_physics/layer_6="player_damage"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

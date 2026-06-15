@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://cx2y5temcibfn"]
+
+[ext_resource type="Script" uid="uid://frbp8i0w7bmg" path="res://end_game_screen.gd" id="1_lrup2"]
+[ext_resource type="FontFile" uid="uid://dg1823mvi7c04" path="res://PirataOne-Regular.ttf" id="1_lybm1"]
+[ext_resource type="Texture2D" uid="uid://d1qnuryrkcrcf" path="res://Tiny Swords (Update 010)/UI/Buttons/Button_Blue_3Slides.png" id="2_lrup2"]
+[ext_resource type="Texture2D" uid="uid://bgjroy0cvj2aw" path="res://Tiny Swords (Update 010)/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="3_0j7ph"]
+[ext_resource type="Texture2D" uid="uid://clomlfg0c6oun" path="res://Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="4_2a7tg"]
+
+[node name="EndGameScreen" type="Control" unique_id=1538087176]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+script = ExtResource("1_lrup2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1960710150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=247852235]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="Result" type="Label" parent="VB" unique_id=807732562]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_lybm1")
+theme_override_font_sizes/font_size = 164
+text = "You Died"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="VB" unique_id=858507230]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Replay" type="TextureButton" parent="VB/Buttons" unique_id=304714831]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_lrup2")
+texture_pressed = ExtResource("3_0j7ph")
+texture_hover = ExtResource("4_2a7tg")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Buttons/Replay" unique_id=497279994]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_lybm1")
+theme_override_font_sizes/font_size = 60
+text = "Respawn "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="TextureButton" parent="VB/Buttons" unique_id=878984940]
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_lrup2")
+texture_pressed = ExtResource("3_0j7ph")
+texture_hover = ExtResource("4_2a7tg")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Buttons/MainMenu" unique_id=1560744814]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_lybm1")
+theme_override_font_sizes/font_size = 60
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VB/Buttons/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="VB/Buttons/MainMenu" to="." method="_on_main_menu_pressed"]
